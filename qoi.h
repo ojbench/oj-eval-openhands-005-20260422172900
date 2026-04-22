@@ -124,7 +124,7 @@ bool QoiEncode(uint32_t width, uint32_t height, uint8_t channels, uint8_t colors
             }
 
             if (!encoded) {
-                if (channels == 4 && a != pre_a) {
+                if (channels == 4) {
                     QoiWriteU8(QOI_OP_RGBA_TAG);
                     QoiWriteU8(r);
                     QoiWriteU8(g);
